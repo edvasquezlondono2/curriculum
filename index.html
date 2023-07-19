@@ -14,22 +14,22 @@
 
     /* Estilos del encabezado */
     header img {
-      width: 10px;
-      height: 10px;
-      border-radius: 70%;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
     }
 
     header {
-      background-color: #7D3C98;
+      background-color: #66307e;
       color: #FFFFFF;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      padding: 10px;
+      padding: 20px 0;
     }
 
     header h1 {
-      margin: 0;
+      margin: 10px 0;
     }
 
     nav ul {
@@ -37,7 +37,9 @@
       margin: 0;
       padding: 0;
       display: flex;
+      justify-content: center;
     }
+
 
     nav li {
       margin: 0 10px;
@@ -46,12 +48,13 @@
     nav a {
       color: #F2F2F2;
       text-decoration: none;
+      font-size: 18px;
     }
 
     /* Estilos de las secciones */
     #about-me {
-      background-color: #90EE90;
-      color: #8B4513;
+      background-color: #8E44AD;
+      color: #FFFFFF;
       padding: 50px;
       text-align: left;
     }
@@ -62,14 +65,14 @@
 
     #skills {
       padding: 50px;
-      background-color: #8E44AD;
+      background-color: #a44ec9;
       color: #FFFFFF;
       text-align: center;
     }
 
     #projects {
       padding: 50px;
-      background-color: #A569BD;
+      background-color: #b272cc;
       color: #FFFFFF;
       text-align: center;
     }
@@ -118,28 +121,44 @@
     form button:hover {
       background-color: #FFFFFF;
     }
+
+    .smaller-text {
+    font-size: smaller; /* Puedes ajustar este valor para obtener el tamaño deseado */
+    }
+
+    .hidden {
+          display: none;
+        }
+
+        .toggle-label {
+          cursor: pointer;
+        }
+
+        .toggle-label:hover {
+          text-decoration: underline;
+        }
+
+
   </style>
 </head>
 
 <body>
-  <section id="image" style="text-align: center; margin-top: 0; background-color: #7D3C98; color: #FFFFFF;">
-    <div style="text-align:center; background-color: #5B2C6F; color: #FFFFFF">
-      <img src="https://media.licdn.com/dms/image/D5603AQH4-7BYzZa_Yg/profile-displayphoto-shrink_400_400/0/1637674823740?e=1694649600&v=beta&t=O2AYm7j9yUAN7gshsQKCKs_e0FgIDlZTOe2px1uItM8" alt="Descripción de la imagen" style="width: 200px; border-radius: 50%;">
-      <p>Edison David Vasquez L.</p>
-      <h2 style="color: white; font-size: 24px;">Table of contest</h2>
-      <ul style="list-style-position: outside; padding-left: 0; margin: 0;">
-        <li><a href="#about-me" style="color:#FFFFFF; font-size: 18px;">About me</a></li>
-        <li><a href="#skills" style="color: #FFFFFF; font-size: 18px;">Skills</a></li>
-        <li><a href="#projects" style="color: #FFFFFF; font-size: 18px;">Projects</a></li>
-        <li><a href="#Degrees" style="color: #FFFFFF; font-size: 18px;">Degrees and courses</a></li>
-        <li><a style="color: #FFFFFF; font-size: 18px;"></a></li>
+  <header>
+    <img src="https://media.licdn.com/dms/image/D5603AQH4-7BYzZa_Yg/profile-displayphoto-shrink_400_400/0/1637674823740?e=1694649600&v=beta&t=O2AYm7j9yUAN7gshsQKCKs_e0FgIDlZTOe2px1uItM8" alt="Descripción de la imagen">
+    <h1>Edison David Vasquez L.</h1>
+    <nav>
+      <ul>
+        <li><a href="#about-me">About me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#Degrees">Degrees and courses</a></li>
       </ul>
-    </div>
-  </section>
+    </nav>
+  </header>
 
-  <section id="about-me" style="margin-top: 0; background-color: #7D3C98 ; color: #FFFFFF;">
+  <section id="about-me">
     <h2>About me</h2>
-    <p>As a Test automation engineer, I stand out for finding innovative solutions for all the challenges, I have experience in the software development and quality testing industry, such as requirement analysis, communication and teamwork. Moreover, I have a great experience working with software testing tools like Selenium, JMeter and pytest, with a particular focus on performance testing and automation of functional tests. I have demonstrated leadership skills by guiding teams towards common goals. My expertise includes leading agile teams and programming in Python.</p>
+    <p>As a Test automation engineer, I stand out for finding innovative solutions for all the challenges, I have experience in the software development and quality testing industry, such as requirement analysis, communication and teamwork. Moreover, I have a great experience working with software testing tools and frameworks like Selenium, Cypress, JMeter,Gatling and Pytest, with a particular focus on automation of functional tests and performance testing. I have demonstrated leadership skills by guiding agile teams towards common goals. My expertise includes programming in Python, JavaScript and Java languages.</p>
   </section>
   <section id="skills">
     <h2>Skills</h2>
@@ -159,7 +178,7 @@
     <ul style="list-style-position: inside; text-align: center;">
 
       <label for="toggle-checkbox1" class="toggle-label" onclick="toggleSection('seccion1')">GLOBANT (American
-        client),Senior Test Automation Engineer, Level 1</label>
+        client), Senior Test Automation Engineer, Level 1<br><span style="font-size: 12px;font-size: 12px; color: blue;">(click to see)</span></label>
       <input type="checkbox" id="toggle-checkbox1" style="display: none;">
       <div id="seccion1" class="hidden">
         <!-- Contenido de la sección 1 -->
@@ -174,8 +193,8 @@
       <br>
 
       <h2></h2>
-      <label for="toggle-checkbox2" class="toggle-label" onclick="toggleSection('seccion2')">GREENSILL/OMNILATAM,Senior
-        QA Engineer</label>
+      <label for="toggle-checkbox2" class="toggle-label" onclick="toggleSection('seccion2')">GREENSILL/OMNILATAM, Senior
+        QA Engineer<br><span style="font-size: 12px;font-size: 12px; color: blue;">(click to see)</span></label>
       <input type="checkbox" id="toggle-checkbox2" style="display: none;">
       <div id="seccion2" class="hidden">
         <!-- Contenido de la sección 2 -->
@@ -187,7 +206,7 @@
       <br>
       <h2></h2>
       <label for="toggle-checkbox3" class="toggle-label" onclick="toggleSection('seccion3')">SOFKA
-        TECHNOLOGIES,Performance Lead</label>
+        TECHNOLOGIES, Performance Testing Lead<br><span style="font-size: 12px; color: blue;">(click to see)</span></label>
       <input type="checkbox" id="toggle-checkbox3" style="display: none;">
       <div id="seccion3" class="hidden">
         <!-- Contenido de la sección 3 -->
@@ -201,8 +220,8 @@
       <br>
 
       <h2></h2>
-      <label for="toggle-checkbox4" class="toggle-label" onclick="toggleSection('seccion4')">SATRACK,Software Quality
-        Engineer</label>
+      <label for="toggle-checkbox4" class="toggle-label" onclick="toggleSection('seccion4')">SATRACK, Software Quality
+        Engineer<br><span style="font-size: 12px; color: blue;">(click to see)</span></label>
       <input type="checkbox" id="toggle-checkbox4" style="display: none;">
       <div id="seccion4" class="hidden">
         <!-- Contenido de la sección 4 -->
@@ -221,26 +240,10 @@
         </ul>
       </div>
 
-      <br>
 
       <h2></h2>
-      <label for="toggle-checkbox5" class="toggle-label" onclick="toggleSection('seccion5')">QVISION,Automation and
-        performance analyst.</label>
-      <input type="checkbox" id="toggle-checkbox5" style="display: none;">
-      <div id="seccion5" class="hidden">
-        <!-- Contenido de la sección 5 -->
-        <ul>
-          <li>I implemented performance tests.</li>
-          <li>I planned, executed, and analyzed performance test results using Jmeter, Neoload, and Nmon.</li>
-          <li>I trained quality groups in automated tests using Selenium, Maven, Jbehave, Serenity, and Junit.</li>
-        </ul>
-      </div>
-
-      <br>
-
-      <h2></h2>
-      <label for="toggle-checkbox6" class="toggle-label" onclick="toggleSection('seccion6')">TECH AND SOLVE,Agile Tester
-        - Performance Analyst</label>
+      <label for="toggle-checkbox6" class="toggle-label" onclick="toggleSection('seccion6')">TECH AND SOLVE, Agile Tester
+        - Performance Analyst<br><span style="font-size: 12px; color: blue;">(click to see)</span></label>
       <input type="checkbox" id="toggle-checkbox6" style="display: none;">
       <div id="seccion6" class="hidden">
         <!-- Contenido de la sección 6 -->
@@ -258,7 +261,7 @@
 
       <h2></h2>
       <label for="toggle-checkbox7" class="toggle-label" onclick="toggleSection('seccion7')">TATA CONSULTANCY
-        SERVICE,Agile Tester - Performance Analyst</label>
+        SERVICE, Agile Tester - Performance Analyst<br><span style="font-size: 12px; color: blue;">(click to see)</span></label>
       <input type="checkbox" id="toggle-checkbox7" style="display: none;">
       <div id="seccion7" class="hidden">
         <!-- Contenido de la sección 7 -->
@@ -278,7 +281,7 @@
   <section id="Degrees" style="margin-bottom: 20px;">
     <h2>Degrees and courses</h2>
     <ul style="list-style-position: inside;">
-      <li>Systems Engineer (UCN)</li>
+      <li>Informatic System Engineer (UCN)</li>
       <li>Information Systems Technologist (ITM)</li>
       <li>Software programming Technician (SENA)</li>
       <li>Cyber Security (UCN)</li>
@@ -290,19 +293,6 @@
 
     <head>
       <title>Mostrar/Ocultar Sección</title>
-      <style>
-        .hidden {
-          display: none;
-        }
-
-        .toggle-label {
-          cursor: pointer;
-        }
-
-        .toggle-label:hover {
-          text-decoration: underline;
-        }
-      </style>
       <script>
         function toggleSection(sectionId) {
           var seccion = document.getElementById(sectionId);
@@ -313,11 +303,11 @@
 
     <body>
       <label for="toggle-checkbox" class="toggle-label" onclick="toggleSection('miSeccion')"
-        style="color: blue;">Additional courses</label>
+        style="color: blue;">Additional courses<br><span style="font-size: 12px; color: blue;">(click to see)</span></label>
       <input type="checkbox" id="toggle-checkbox" style="display: none;">
       <div id="miSeccion" class="hidden">
         <!-- Contenido de la sección -->
-        <ul>
+        <ul style="list-style-position: inside;">
           <li>English Job Interview Course (platzi)</li>
           <li>Introduction to Selenium with Python Course (platzi)</li>
           <li>Public Speaking Course (platzi)</li>
@@ -366,10 +356,10 @@
 
 
   <section style="text-align:center; background-color: #FFFFFF; color: #000000;">
-    <h2>social medias</h2>
+    <h2>Social media</h2>
     <div class="social-media" style="display:inline-block;">
       <a href="https://www.linkedin.com/in/edison-david-vasquez-londo%C3%B1o-05084489/"
-        style="color: #000000;">LinkedIn</a>
+        style="color: blue;">LinkedIn</a>
         <p></p>
     </div>
   </section>
