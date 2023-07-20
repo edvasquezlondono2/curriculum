@@ -37,7 +37,7 @@
     nav ul {
       list-style: none;
       margin: 0;
-      padding: 0;
+      padding: 25px;
       display: flex;
       justify-content: center;
     }
@@ -57,7 +57,7 @@
     #about-me {
       background-color: #8E44AD;
       color: #FFFFFF;
-      padding: 50px;
+      padding: 25px;
       text-align: left;
     }
 
@@ -66,62 +66,31 @@
     }
 
     #skills {
-      padding: 50px;
+      padding: 25px;
       background-color: #a44ec9;
       color: #FFFFFF;
       text-align: center;
     }
 
     #projects {
-      padding: 50px;
+      padding: 25px;
       background-color: #b272cc;
       color: #FFFFFF;
       text-align: center;
     }
 
     #Degrees {
-      padding: 50px;
+      padding: 25px;
       background-color: #BB8FCE;
       color: #FFFFFF;
       text-align: center;
     }
 
-    #contact {
-      padding: 50px;
-      background-color: #D2B4DE;
-      color: #000000;
-    }
-
-    /* Estilos del formulario de contacto */
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 500px;
-    }
-
-    form label {
-      margin-bottom: 10px;
-    }
-
-    form input,
-    form textarea {
-      padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    form button {
-      background-color: #FFFFFF;
-      color: #000000;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background-color: #FFFFFF;
+    #Social {
+      padding: 25px;
+      background-color: #eee9f0;
+      color: #160521;
+      text-align: center;
     }
 
     .hidden {
@@ -132,19 +101,22 @@
           cursor: pointer;
         }
 
-        .toggle-label:hover {
-          text-decoration: underline;
-        }
 
 
   </style>
+    <script>
+      function toggleSection(sectionId) {
+        var seccion = document.getElementById(sectionId);
+        seccion.classList.toggle("hidden");
+      }
+    </script>
 </head>
 
 <body>
   <header>
     <img src="https://media.licdn.com/dms/image/D5603AQH4-7BYzZa_Yg/profile-displayphoto-shrink_400_400/0/1637674823740?e=1694649600&v=beta&t=O2AYm7j9yUAN7gshsQKCKs_e0FgIDlZTOe2px1uItM8" alt="Descripción de la imagen">
-    <h1>Edison David Vasquez L.<br><span style="font-size: 15px;">Automation and Performance testing leader</span></h1>
-    <nav>
+    <h1>Edison David Vasquez L.<br><span style="font-size: 16px;">Automation and Performance testing leader</span></h1>
+    <nav style="text-decoration: underline;">
       <ul>
         <li><a href="#about-me">About me</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -174,8 +146,6 @@
 
   <section id="projects">
     <h2>Projects</h2>
-    <ul style="list-style-position: inside; text-align: center;">
-
       <label for="toggle-checkbox1" class="toggle-label" onclick="toggleSection('seccion1')">GLOBANT (American
         client), Senior Test Automation Engineer, Level 1<br><span style="font-size: 12px;font-size: 12px; color: blue;">(click to see)</span></label>
       <input type="checkbox" id="toggle-checkbox1" style="display: none;">
@@ -272,7 +242,7 @@
     </ul>
   </section>
 
-  <section id="Degrees" style="margin-bottom: 20px;">
+  <section id="Degrees">
     <h2>Degrees and courses</h2>
     <ul style="list-style-position: inside;">
       <li>Informatic System Engineer (UCN)</li>
@@ -284,80 +254,63 @@
       <li>Certified Marketing Strategy Associate (SMstudy)</li>
       <li>Tester Certified (ISTQB)</li>
     </ul>
-
-    <head>
-      <title>Mostrar/Ocultar Sección</title>
-      <script>
-        function toggleSection(sectionId) {
-          var seccion = document.getElementById(sectionId);
-          seccion.classList.toggle("hidden");
-        }
-      </script>
-    </head>
-
-    <body>
-      <label for="toggle-checkbox" class="toggle-label" onclick="toggleSection('miSeccion')"
-        style="color: blue;">Additional courses<br><span style="font-size: 12px; color: blue;">(click to see)</span></label>
-      <input type="checkbox" id="toggle-checkbox" style="display: none;">
-      <div id="miSeccion" class="hidden">
-        <!-- Contenido de la sección -->
-        <ul style="list-style-position: inside;">
-          <li>Python Fundamentals Course (Platzi)</li>
-          <li>Artificial Intelligence for Product Discovery and Product Design Course (Platzi)</li>
-          <li>Artificial Intelligence Course: ChatGPT, DALL-E, and Hugging Face (Platzi)</li>
-          <li>Introduction to Software Design Patterns Course (Platzi)</li>
-          <li>English Job Interview Course (Platzi)</li>
-          <li>Introduction to Selenium with Python Course (Platzi)</li>
-          <li>Public Speaking Course (Platzi)</li>
-          <li>Artificial Intelligence Tools for Data Teams Course (Platzi)</li>
-          <li>Personal Branding Free Course (Platzi)</li>
-          <li>Identify and Overcome Impostor Syndrome Course (Platzi)</li>
-          <li>English Audio History: Origin of the Language (Platzi)</li>
-          <li>Artificial Intelligence Tools for Developers Course (Platzi)</li>
-          <li>Object-Oriented Programming (OOP) Course (Platzi)</li>
-          <li>Web Development Course with ChatGPT (Platzi)</li>
-          <li>Introduction to the Startup World Audio Course (Platzi)</li>
-          <li>Pitch Workshop for Startups (Platzi)</li>
-          <li>Interactive English Audio Course: Trapped in Technology (Platzi)</li>
-          <li>Advanced English for Work Course (Platzi)</li>
-          <li>English Course for Developers (Platzi)</li>
-          <li>English Course for Startups (Platzi)</li>
-          <li>Step by Step Rest Api Testing using Python + Pytest + Allure (Udemy)</li>
-          <li>Terraform on Microsoft Azure - Terraform v12/ v13 (Udemy)</li>
-          <li>Performance Testing Using Locust (Udemy)</li>
-          <li>Cypress - modern automation Testing from Scratch + framework (Udemy)</li>
-          <li>TDD with nodeJS, tests with Jest (Udemy)</li>
-          <li>RPA (Robotic Process Automation) con UiPath (Udemy)</li>
-          <li>Corporate Hacking- From 0 to 100 (Udemy)</li>
-          <li>Performance Testing Using Gatling - Advanced Level (Udemy)</li>
-          <li>Performance Testing Using Gatling - Beginner Level (Udemy)</li>
-          <li>Rest API Automation using Rest Sharp and .net (Udemy)</li>
-          <li>Angular automation with Protractor + Typescript + Cucumber (Udemy)</li>
-          <li>Data analysis and visualization with Power BI (Udemy)</li>
-          <li>How to Use SMART Goals (Udemy)</li>
-          <li>Learning and teaching in virtual environments (Sofka University:)</li>
-          <li>Design databases in SQL (SENA)</li>
-          <li>Quality in software development (SENA)</li>
-          <li>Management of software development projects (SENA)</li>
-          <li>Database: conceptualization and Administration systems (SENA)</li>
-          <li>Diplomat coaching and transformation (Politécnico de suramericana)</li>
-          <li>Basic Diplomat PHP and my SQL (Jaime Isaza Cdavid)</li>
-        </ul>
-      </div>
-    </body>
-  </section>
-
-
-  <section style="text-align:center; background-color: #FFFFFF; color: #000000;">
-    <h2>Social media</h2>
-    <div class="social-media" style="display:inline-block;">
-      <a href="https://www.linkedin.com/in/edison-david-vasquez-londo%C3%B1o-05084489/"
-        style="color: blue;">LinkedIn</a>
-        <p></p>
+    <label for="toggle-checkbox" class="toggle-label" onclick="toggleSection('miSeccion')" style="color: blue;">
+      Additional courses<br>
+      <span style="font-size: 13px; color: blue;">(click to see)</span>
+    </label>
+    <input type="checkbox" id="toggle-checkbox" style="display: none;">
+    <div id="miSeccion" class="hidden">
+      <!-- Contenido de la sección -->
+      <ul style="list-style-position: inside;">
+        <li>Python Fundamentals Course (Platzi)</li>
+        <li>Artificial Intelligence for Product Discovery and Product Design Course (Platzi)</li>
+        <li>Artificial Intelligence Course: ChatGPT, DALL-E, and Hugging Face (Platzi)</li>
+        <li>Introduction to Software Design Patterns Course (Platzi)</li>
+        <li>English Job Interview Course (Platzi)</li>
+        <li>Introduction to Selenium with Python Course (Platzi)</li>
+        <li>Public Speaking Course (Platzi)</li>
+        <li>Artificial Intelligence Tools for Data Teams Course (Platzi)</li>
+        <li>Personal Branding Free Course (Platzi)</li>
+        <li>Identify and Overcome Impostor Syndrome Course (Platzi)</li>
+        <li>English Audio History: Origin of the Language (Platzi)</li>
+        <li>Artificial Intelligence Tools for Developers Course (Platzi)</li>
+        <li>Object-Oriented Programming (OOP) Course (Platzi)</li>
+        <li>Web Development Course with ChatGPT (Platzi)</li>
+        <li>Introduction to the Startup World Audio Course (Platzi)</li>
+        <li>Pitch Workshop for Startups (Platzi)</li>
+        <li>Interactive English Audio Course: Trapped in Technology (Platzi)</li>
+        <li>Advanced English for Work Course (Platzi)</li>
+        <li>English Course for Developers (Platzi)</li>
+        <li>English Course for Startups (Platzi)</li>
+        <li>Step by Step Rest Api Testing using Python + Pytest + Allure (Udemy)</li>
+        <li>Terraform on Microsoft Azure - Terraform v12/ v13 (Udemy)</li>
+        <li>Performance Testing Using Locust (Udemy)</li>
+        <li>Cypress - modern automation Testing from Scratch + framework (Udemy)</li>
+        <li>TDD with nodeJS, tests with Jest (Udemy)</li>
+        <li>RPA (Robotic Process Automation) con UiPath (Udemy)</li>
+        <li>Corporate Hacking- From 0 to 100 (Udemy)</li>
+        <li>Performance Testing Using Gatling - Advanced Level (Udemy)</li>
+        <li>Performance Testing Using Gatling - Beginner Level (Udemy)</li>
+        <li>Rest API Automation using Rest Sharp and .net (Udemy)</li>
+        <li>Angular automation with Protractor + Typescript + Cucumber (Udemy)</li>
+        <li>Data analysis and visualization with Power BI (Udemy)</li>
+        <li>How to Use SMART Goals (Udemy)</li>
+        <li>Learning and teaching in virtual environments (Sofka University:)</li>
+        <li>Design databases in SQL (SENA)</li>
+        <li>Quality in software development (SENA)</li>
+        <li>Management of software development projects (SENA)</li>
+        <li>Database: conceptualization and Administration systems (SENA)</li>
+        <li>Diplomat about coaching and transformation (Politécnico de suramericana)</li>
+        <li>Basic Diplomat PHP and my SQL (Jaime Isaza Cadavid)</li>
+      </ul>
     </div>
   </section>
-
- 
+  <section id="Social">
+    <h2>Social media</h2>
+    <div class="social-media">
+      <a href="https://www.linkedin.com/in/edison-david-vasquez-londo%C3%B1o-05084489/"
+        style="color: blue;">LinkedIn</a>
+    </div>
+  </section>
 </body>
-
 </html>
